@@ -10,5 +10,5 @@
  import "github.com/folospace/jsonhelper"
 
  bytes, err := json.Marshal(FillDefaultToNil(struct {A *string}{}))
- fmt.Println(string(bytes))
+ fmt.Println(string(bytes)) // {"A":""}
 ```
