@@ -4,3 +4,7 @@
 - *string => ""
 - *int => 0
 - []int, []string => []
+
+#### how to use
+- json.Marshal(FillDefaultToNil(struct {A *string}{}))
+- json.Marshal(FillDefaultToNil(anyVal))
