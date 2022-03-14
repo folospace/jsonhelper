@@ -6,5 +6,7 @@
 - []int, []string => []
 
 #### how to use
-- json.Marshal(FillDefaultToNil(struct {A *string}{}))
-- json.Marshal(FillDefaultToNil(anyVal))
+```go
+ bytes, err := json.Marshal(FillDefaultToNil(struct {A *string}{}))
+ bytes, err := json.Marshal(FillDefaultToNil(anyVal))
+```
