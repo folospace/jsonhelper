@@ -21,9 +21,10 @@ func TestFillDefaultToNil(t *testing.T) {
         A5 *Test          `json:"a_5"`
     }
 
-    ex := &Test{A3: map[int]*myint{1: nil}, A4: []*myint{nil}, A5:&Test{}}
+    ex := &Test{A3: map[int]*myint{1: nil}, A4: []*myint{nil}}
 
     jb, _ := json.Marshal(FillDefaultToNil(ex))
 
     t.Log(string(jb))
+    //{"a_1":"","a_2":0,"a_3":{"1":0},"a_4":[0],"a_5":null}
 }
